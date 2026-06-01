@@ -1,0 +1,2 @@
+source_row_id,resource_name,resource_type,source_url,relative_path
+DOC-001,产品介绍,document,https://example.invalid/source/doc-001,files/product-intro.pdf

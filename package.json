@@ -1,0 +1,30 @@
+{
+  "name": "ai-resource-migration-kit",
+  "version": "0.1.0",
+  "description": "AI 辅助资源迁移作业框架，包含代理 runbook、模板、适配器和端到端模拟流程。",
+  "type": "module",
+  "private": false,
+  "files": [
+    "agents/",
+    "docs/",
+    "examples/",
+    "skills/",
+    "src/",
+    "templates/",
+    "tests/",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "armk": "./src/cli/index.mjs"
+  },
+  "scripts": {
+    "smoke": "node tests/run-smoke.mjs",
+    "doctor": "node src/cli/index.mjs doctor"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

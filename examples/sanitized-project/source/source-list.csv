@@ -1,0 +1,4 @@
+source_row_id,resource_name,resource_type,source_url,relative_path
+DOC-001,产品介绍,document,https://example.invalid/source/doc-001,files/product-intro.pdf
+IMG-001,显微图片,image,https://example.invalid/source/img-001,files/microscope-image.png
+VID-001,培训短片,video,https://example.invalid/source/vid-001,files/training-clip.mp4

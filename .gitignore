@@ -1,0 +1,13 @@
+node_modules/
+tmp/
+dist/
+.env
+.env.*
+*.log
+*.xlsx
+*.xls
+*.xlsm
+*.bak
+workspace/
+local-secrets/
+real-client-data/
