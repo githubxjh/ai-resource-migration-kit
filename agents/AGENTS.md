@@ -69,12 +69,14 @@ Codex 或其他代码代理进入资源迁移项目时，先读本文件。
 
 ## 推荐命令
 
-```powershell
-node .\src\cli\index.mjs doctor
-node .\src\cli\index.mjs init-project --out .\workspace\demo --name DemoMigration
-node .\src\cli\index.mjs plan --source .\source-list.csv --out .\workspace\ledger.csv
-node .\src\cli\index.mjs verify-local --ledger .\workspace\ledger.csv --base . --out .\workspace\local-checks.json
-node .\src\cli\index.mjs report --ledger .\workspace\ledger.csv --out .\workspace\report.md
+在 `ai-resource-migration-kit` 仓库根目录运行：
+
+```sh
+npm run cli -- doctor
+npm run cli -- init-project --out ./workspace/demo --name DemoMigration
+npm run cli -- plan --source ./source-list.csv --out ./workspace/ledger.csv
+npm run cli -- verify-local --ledger ./workspace/ledger.csv --base . --out ./workspace/local-checks.json
+npm run cli -- report --ledger ./workspace/ledger.csv --out ./workspace/report.md
 ```
 
 真实后台适配器必须属于具体项目并保持私有，除非已完全脱敏。

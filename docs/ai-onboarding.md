@@ -1,6 +1,6 @@
 # AI 上手指南
 
-这份指南用于让同事的 AI 尽快理解资源迁移流程，同时避免过早接触真实后台。
+这份指南用于让新的 AI 代理尽快理解资源迁移流程，同时避免过早接触真实后台。
 
 ## 目标
 
@@ -16,11 +16,11 @@
 1. 阅读 `agents/AGENTS.md`、本文档、`docs/operating-playbook.md` 和 `docs/live-adapter-guide.md`。
 2. 阅读 `docs/platform-profile-resource-center.md` 和 `docs/runbooks/` 下对应的 runbook。
 3. 运行 `npm run smoke`。
-4. 用 `init-project` 初始化新的私有工作区。
+4. 用 `npm run cli -- init-project --out ./tmp/demo-project --name DemoMigration` 初始化新的演示工作区。
 5. 用项目事实填写 `PROJECT_GUIDE.md`、`HANDOFF.md` 和 `PROGRESS.md`。
 6. 把一小份脱敏源清单转换成 `ledger.csv`。
-7. 运行 `plan`、`verify-local`、`mock-upload`、`backfill` 和 `report`。
-8. 如果涉及视频，运行 `plan-video-batch` 并检查大小分桶。
+7. 运行 `npm run cli -- plan`、`npm run cli -- verify-local`、`npm run cli -- mock-upload`、`npm run cli -- backfill` 和 `npm run cli -- report`。
+8. 如果涉及视频，运行 `npm run cli -- plan-video-batch` 并检查大小分桶。
 9. 输出“真实上线准备度评审”。
 
 准备度门禁全部通过前，不要实现或运行真实后台适配器。
@@ -81,6 +81,7 @@
 ```text
 先读 agents/AGENTS.md 和 docs/ai-onboarding.md。
 任何真实后台工作前，先跑模拟流程。
+仓库内命令统一使用 `npm run cli -- <command>`。
 以源清单行作为任务单位。
 没有后台证据，不要标记成功。
 后台状态不明时，停线并写入证据。

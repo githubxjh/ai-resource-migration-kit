@@ -45,7 +45,7 @@ description: 当 Codex 需要规划、执行、审计或交接资源迁移工作
 ## 参考资料
 
 - 判断任务状态时，读取 `references/status-taxonomy.md`。
-- 新 AI 或同事上手时，读取仓库的 `docs/ai-onboarding.md`。
+- 新 AI 代理或使用者上手时，读取仓库的 `docs/ai-onboarding.md`。
 - 创建真实后台适配器前，读取仓库的 `docs/adapter-contract.md`。
 - 执行真实上传批次前，读取仓库的 `docs/recovery-and-rollback.md`。
 - 发布示例或日志前，读取仓库的 `docs/sanitization.md`。

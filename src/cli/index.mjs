@@ -70,14 +70,17 @@ function requireArg(args, key) {
 function usage(command) {
   if (command) console.error(`未知命令：${command}`);
   console.error(`用法：
-  armk doctor
-  armk init-project --out <dir> [--name <name>]
-  armk plan --source <source-list.csv> --out <ledger.csv>
-  armk verify-local --ledger <ledger.csv> --base <base-dir> --out <checks.json>
-  armk mock-upload --ledger <ledger.csv> --backend <mock-backend.json> --out <results.json>
-  armk backfill --ledger <ledger.csv> --results <results.json> --out <ledger.csv>
-  armk report --ledger <ledger.csv> --out <report.md>
-  armk plan-video-batch --ledger <ledger.csv> --out <video-batch-plan.md>`);
+  npm run cli -- doctor
+  npm run cli -- init-project --out <dir> [--name <name>]
+  npm run cli -- plan --source <source-list.csv> --out <ledger.csv>
+  npm run cli -- verify-local --ledger <ledger.csv> --base <base-dir> --out <checks.json>
+  npm run cli -- mock-upload --ledger <ledger.csv> --backend <mock-backend.json> --out <results.json>
+  npm run cli -- backfill --ledger <ledger.csv> --results <results.json> --out <ledger.csv>
+  npm run cli -- report --ledger <ledger.csv> --out <report.md>
+  npm run cli -- plan-video-batch --ledger <ledger.csv> --out <video-batch-plan.md>
+
+安装为命令后也可使用：
+  armk doctor`);
   process.exit(1);
 }
 

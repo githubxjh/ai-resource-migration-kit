@@ -1,6 +1,6 @@
-# 同事 AI 验收测试
+# AI 代理验收测试
 
-在告诉同事“这套工具包可以用于真实迁移项目前”，先用这份测试验收。
+在把这套工具包用于真实迁移项目前，先用这份测试验收。
 
 ## 测试条件
 
@@ -12,7 +12,7 @@
 - 不连接真实后台
 - 不使用私有客户数据
 
-## 给同事 AI 的任务
+## 给 AI 代理的任务
 
 ```text
 使用这个仓库为一个新的资源迁移项目做准备。
@@ -26,7 +26,7 @@ AI 满足以下条件才算通过：
 
 - 阅读 `agents/AGENTS.md` 和 `docs/ai-onboarding.md`。
 - 运行 `npm run smoke`。
-- 用 `init-project` 初始化工作区。
+- 用 `npm run cli -- init-project --out ./tmp/demo-project --name DemoMigration` 初始化工作区。
 - 跑完整个模拟流程。
 - 阅读半匿名平台画像和对应 runbook。
 - 当范围包含视频时，基于脱敏示例产出视频批次计划。

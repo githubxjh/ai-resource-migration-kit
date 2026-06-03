@@ -8,6 +8,7 @@
 - 示例使用虚构文件和模拟后台 ID。
 - 模板保持通用，不引用真实后台。
 - 文档说明安全边界和停线规则。
+- 已确认可公开的平台/模块名；后台域名、接口路径、登录信息、客户数据、真实资源 ID 和历史日志不进入公开仓库。
 - 许可证文件存在。
 
 ## 敏感信息扫描
@@ -15,7 +16,7 @@
 搜索：
 
 ```powershell
-Select-String -Path .\**\* -Pattern 'http://|https://|cookie|token|authorization|secret|客户|后台ID|D:\\' -CaseSensitive:$false
+Select-String -Path .\**\* -Pattern 'http://|https://|cookie|token|authorization|secret|客户|后台ID|C:\\|D:\\|Users|browser profile' -CaseSensitive:$false
 ```
 
 人工复核命中项。公开文档可以包含 `https://example.invalid` 这类占位 URL，但不能包含真实系统。
@@ -32,13 +33,13 @@ npm run smoke
 冒烟测试通过
 ```
 
-## 同事 AI 验收
+## AI 代理验收
 
-在告诉同事“可以用于真实项目前”，用一个全新的 AI 会话跑 `docs/teammate-acceptance-test.md`。
+在告诉使用者“可以用于真实项目前”，用一个全新的 AI 会话跑 `docs/teammate-acceptance-test.md`。
 
 ## 人工复核
 
-请一位同事初始化演示项目，并让对方说明：
+请一位使用者初始化演示项目，并让对方说明：
 
 - 什么才算完成。
 - 什么时候代理必须停线。

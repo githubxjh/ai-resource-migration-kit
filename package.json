@@ -20,6 +20,7 @@
     "armk": "./src/cli/index.mjs"
   },
   "scripts": {
+    "cli": "node src/cli/index.mjs",
     "smoke": "node tests/run-smoke.mjs",
     "doctor": "node src/cli/index.mjs doctor"
   },
